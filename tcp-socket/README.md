@@ -1,0 +1,1 @@
+Simple TCP-socket solution with a client and server, using the winsock2 library. The server accepts simple "expressions" from the connected clients, and responds with the answer. The messages are sent unencrypted. 
