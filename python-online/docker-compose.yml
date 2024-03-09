@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  backend:
+    build: ./online-compiler-backend
+    volumes:
+      - ./online-compiler-backend:/app
+    ports:
+      - "8080:8080"
+  frontend:
+    build: ./online-compiler
+    volumes:
+      - ./online-compiler:/app
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
